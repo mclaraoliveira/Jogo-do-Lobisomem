@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 320px;
+    background-image: url(floresta.png);
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.arbusto {
+    position: absolute;
+    bottom: 0;
+    animation: arbusto-animation 2s infinite linear;
+}
+
+.lobisomem {
+    position: absolute;
+    bottom: 0px;
+}
+
+.nuvens {
+    position: absolute;
+    bottom: 180px;
+    animation: nuvens-animation 20s infinite linear;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes arbusto-animation {
+    from {
+        right: -85px;
+    }
+
+    to {
+        right: 100%;
+    }
+
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 120px;
+    }
+
+    50% {
+        bottom: 120px;
+    }
+
+    75% {
+        bottom: 120px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes nuvens-animation {
+    from {
+        right: -105px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
